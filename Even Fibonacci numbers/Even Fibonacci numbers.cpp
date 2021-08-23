@@ -35,7 +35,6 @@ int main()
 
         if (arr[2] % 2 == 0)
         {
-
             sum += arr[2];
         }
     }
