@@ -58,13 +58,10 @@ int main()
 				tempcons++;
 				for (int o = 0; o < arrayplace; o++)//Checks through all primes for a match
 				{
-					if (tempsum == primes[o])
+					if (tempsum == primes[o] && tempsum > sum[arr] && tempcons > cons)
 					{
-						if (tempsum > sum[arr] && tempcons > cons)
-						{
-							cons = tempcons;
-							sum[arr] = tempsum;
-						}
+						cons = tempcons;
+						sum[arr] = tempsum;
 					}
 				}
 			}
