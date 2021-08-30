@@ -42,10 +42,6 @@ int main()
 
 	for (int arr = 0; arr < arrayplace; arr++)//Removes one number from back of prime array
 	{
-
-		if (sum[arr] > 500000)
-			break;
-
 		tempsum = 0;
 		tempcons = 0;
 
@@ -62,6 +58,7 @@ int main()
 					{
 						cons = tempcons;
 						sum[arr] = tempsum;
+						std::cout << tempsum << "\n";
 					}
 				}
 			}
