@@ -58,7 +58,6 @@ int main()
 					{
 						cons = tempcons;
 						sum[arr] = tempsum;
-						std::cout << tempsum << "\n";
 					}
 				}
 			}
