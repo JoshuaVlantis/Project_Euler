@@ -18,16 +18,13 @@ int main()
 {
     int tempsum = 0, reversedNumber = 0, remainder, sum = 0, temprevsum = 0, highest = 0;
 
-    for (int i = 100; i < 999; i++)
+    for (int i = 100; i < 1000; i++)
     {
-        
-        for (int ii = 100; ii < 999; ii++)
+        for (int ii = 100; ii < 1000; ii++)
         {
-            tempsum = i * ii;
-            temprevsum = tempsum;
-            remainder = 0;
-            reversedNumber = 0;
-            remainder = 0;
+           tempsum = i * ii;
+           temprevsum = tempsum;
+           reversedNumber = 0;
  
            while (temprevsum != 0)
            {
@@ -36,16 +33,11 @@ int main()
                 temprevsum /= 10;
            }
            
-           if (tempsum == reversedNumber)
+           if (tempsum == reversedNumber && tempsum > sum)
            {
                sum = tempsum;
-               if (sum > highest)
-               {
-                   highest = sum;
-               }
            }
-
         }
-    }
-    std::cout << highest << "\n";
+    }   
+    std::cout << sum << "\n";
 }
