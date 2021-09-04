@@ -31,7 +31,7 @@ using namespace std;
 
 string encryptDecrypt(string toEncrypt, int ifirst, int isecond, int ithird)
 {
-	char alpha[26] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
+	char alpha[] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
 	char key[3] = {alpha[ifirst], alpha[isecond], alpha[ithird] }; //Any chars will work
 	string output = toEncrypt;
 
@@ -39,6 +39,7 @@ string encryptDecrypt(string toEncrypt, int ifirst, int isecond, int ithird)
 	{
 		output[i] = toEncrypt[i] ^ key[i % (sizeof(key) / sizeof(char))];
 	}
+	cout << alpha[ifirst] << alpha[isecond] << alpha[ithird] << "\n";
 	return output;
 }
 
@@ -83,6 +84,7 @@ int main(int argc, const char* argv[])
 				isecond = ii;
 				ithird = iii;
 				string encrypted = encryptDecrypt(sencrypted, ifirst, isecond, ithird);
+				
 				cout << encrypted << "\n" << "\n" ;
 			}
 		}

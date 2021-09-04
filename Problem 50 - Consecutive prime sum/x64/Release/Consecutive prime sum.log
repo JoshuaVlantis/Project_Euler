@@ -1,7 +1,7 @@
 ﻿  Consecutive prime sum.cpp
   Generating code
-  7 of 10 functions (70.0%) were compiled, the rest were copied from previous compilation.
+  1 of 10 functions (10.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  Consecutive prime sum.vcxproj -> C:\Users\Joshua\Documents\Github\Project_Euler\Consecutive prime sum\x64\Release\Consecutive prime sum.exe
+  Consecutive prime sum.vcxproj -> C:\Users\Joshua\Documents\Github\Project_Euler\Problem 50 - Consecutive prime sum\x64\Release\Consecutive prime sum.exe

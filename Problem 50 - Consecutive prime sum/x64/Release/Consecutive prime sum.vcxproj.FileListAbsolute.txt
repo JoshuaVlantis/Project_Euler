@@ -1,1 +1,2 @@
 C:\Users\Joshua\Documents\Github\Project_Euler\Consecutive prime sum\x64\Release\Consecutive prime sum.exe
+C:\Users\Joshua\Documents\Github\Project_Euler\Problem 50 - Consecutive prime sum\x64\Release\Consecutive prime sum.exe
