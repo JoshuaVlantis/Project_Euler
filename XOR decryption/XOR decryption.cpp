@@ -19,11 +19,75 @@ Your task has been made easy, as the encryption key consists of three lower case
 (right click and 'Save Link/Target As...'), a file containing the encrypted ASCII codes, 
 and the knowledge that the plain text must contain common English words, decrypt the message and find the sum of the ASCII
 values in the original text.
+
+17576
 */
 
 #include <iostream>
+#include<stdio.h>
+#include <fstream>
 
-int main()
+using namespace std;
+
+string encryptDecrypt(string toEncrypt, int ifirst, int isecond, int ithird)
 {
-    std::cout << "Hello World!\n";
+	char alpha[26] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
+	char key[3] = {alpha[ifirst], alpha[isecond], alpha[ithird] }; //Any chars will work
+	string output = toEncrypt;
+
+	for (int i = 0; i < toEncrypt.size(); i++)
+	{
+		output[i] = toEncrypt[i] ^ key[i % (sizeof(key) / sizeof(char))];
+	}
+	return output;
 }
+
+
+int main(int argc, const char* argv[])
+{
+	int ifirst{};
+	int isecond{};
+	int ithird{};
+
+	int filenumbers[1455];
+	std::string sencrypted;
+	std::string key;
+	std::ifstream file("p059_cipher.txt");
+	int x = 0;
+
+	//Fills array with numbers in file
+	for (x = 0; x < 1455; ++x)
+	{
+		file >> filenumbers[x];
+	}
+	file.close();
+
+	//Goes through the array of numbers and changes int value to ascii
+	for (int i = 0; i < 1455; i++)
+	{
+		char ascvalue = filenumbers[i];
+		//std::cout << ascvalue;
+		sencrypted = sencrypted + ascvalue;
+	}
+	
+	//std::cout << sencrypted;
+	
+	//Key gen
+	for (int i = 0; i < 26; i++)
+	{
+		for (int ii = 0; ii < 26; ii++)
+		{
+			for (int iii = 0; iii < 26; iii++)
+			{
+				ifirst = i;
+				isecond = ii;
+				ithird = iii;
+				string encrypted = encryptDecrypt(sencrypted, ifirst, isecond, ithird);
+				cout << encrypted << "\n" << "\n" ;
+			}
+		}
+	}
+}
+
+
+
